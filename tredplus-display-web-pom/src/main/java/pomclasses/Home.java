@@ -17,6 +17,12 @@ private WebElement gethomebutton() {
 	return driver.findElement(By.xpath(locator));
 }
 
+private WebElement getTitleText() {
+	String locator = prop.getProperty("homepageTitleText");
+	return driver.findElement(By.xpath(locator));
+	
+}
+
 
 
 public Home(WebDriver driver) {
@@ -28,9 +34,15 @@ public Home(WebDriver driver) {
 
 public void ClickHomeButton() {
 	gethomebutton().click();
-	
+}
+public String getHomePageTitleText() {
+    return getTitleText().getText();
 }
 
+// ✅ Validation (Optional)
+public boolean isTitleTextDisplayed() {
+    return getTitleText().isDisplayed();
+}
 
 
 
