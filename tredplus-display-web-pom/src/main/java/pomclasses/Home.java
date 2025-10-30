@@ -15,7 +15,7 @@ public class Home extends pombaseclass{
 private WebElement gethomebutton() {
 	String locator = prop.getProperty("homebutton");
 	return driver.findElement(By.xpath(locator));
-};
+}
 
 
 
@@ -27,7 +27,8 @@ public Home(WebDriver driver) {
 
 
 public void ClickHomeButton() {
-	gethomebutton.click();
+	gethomebutton().click();
+	
 }
 
 
